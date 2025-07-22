@@ -56,71 +56,85 @@ ml-model-deployment-api/
 
 ---
 
-## 📤 API Usage
+## 🌐 API Usage
 
-### 🔗 Endpoint
+### 🔗 **Endpoint**
 
+**POST** `/api/predict`
 
+---
 
-POST /api/predict
-
-### 📝 Sample Request
+### 📝 **Sample Request**
 
 ```json
 {
   "data": [5.1, 3.5, 1.4, 0.2]
 }
+```
 
+---
 
-✅ Sample Response
+### ✅ **Sample Response**
 
+```json
 {
   "prediction": 0,
   "class_name": "setosa"
 }
+```
 
+---
 
+## 🧪 Run Locally
 
-🧪 Run Locally
+### 1️⃣ Install dependencies
 
-1. Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
-2. Train the model
+### 2️⃣ Train the model
 
+```bash
 python -m training.train_pipeline
+```
 
-3. Start API
+### 3️⃣ Start the API
 
+```bash
 uvicorn app.main:app --reload
+```
 
-4. Test in Swagger UI
+### 4️⃣ Test in Swagger UI
 
-Visit: http://127.0.0.1:8000/docs
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
+---
 
+## 🐳 Run with Docker
 
-🐳 Run with Docker
+### 1️⃣ Build the image
 
-1. Build image
-
+```bash
 docker build -t ml-api .
+```
 
-2. Run container
+### 2️⃣ Run the container
 
+```bash
 docker run -p 8000:8000 ml-api
+```
 
-Visit: http://localhost:8000/docs
+Visit: [http://localhost:8000/docs](http://localhost:8000/docs)
 
+---
 
+## 🖼️ Output Samples
 
-🧪 Output Samples
-
-- outputs/swagger_ui.png — Screenshot of Swagger interface
-
-- outputs/predict_response.png — Prediction result
-
-- outputs/sample_request.json — Example input
-
-- outputs/sample_curl.txt — cURL example
+```
+📁 outputs/
+├── swagger_ui.png          – Screenshot of Swagger
+├── predict_response.png    – Sample model response
+├── sample_request.json     – Example request payload
+├── sample_curl.txt         – Example cURL command
+```
