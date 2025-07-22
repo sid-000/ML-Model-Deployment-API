@@ -16,7 +16,9 @@ A production-ready API for serving machine learning model predictions using **Fa
 ---
 
 ## 📁 Project Structure
+## 📂 Folder Structure
 
+```
 ml-model-deployment-api/
 ├── app/ # FastAPI app and logic
 │ ├── main.py
@@ -31,6 +33,7 @@ ml-model-deployment-api/
 ├── requirements.txt
 ├── README.md
 
+```
 
 ---
 
