@@ -24,9 +24,12 @@ ml-model-deployment-api/
 │ ├── main.py
 │ ├── model/
 │ ├── routes/
-│ ├── schemas/
-│ └── utils/
+│ └── schemas/
 ├── training/ # Model training pipeline
+│ ├──__init__.py
+│ ├──config.py
+│ ├──train_pipeline.py
+│ └──utils.py
 ├── test/ # Tests (TBD)
 ├── outputs/ # Screenshots and sample inputs
 ├── Dockerfile # Docker container config
